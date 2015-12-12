@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AuthenticationService.Test.AuthenticationServiceProxy {
+namespace AuthenticationService.Test.testAuthAzure {
     using System.Runtime.Serialization;
     using System;
     
@@ -75,29 +75,29 @@ namespace AuthenticationService.Test.AuthenticationServiceProxy {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AuthenticationServiceProxy.IAuthenticationService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="testAuthAzure.IAuthenticationService")]
     public interface IAuthenticationService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticationService/GetUser", ReplyAction="http://tempuri.org/IAuthenticationService/GetUserResponse")]
-        string GetUser(int value);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticationService/CreateUser", ReplyAction="http://tempuri.org/IAuthenticationService/CreateUserResponse")]
+        string CreateUser(int value);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticationService/GetUser", ReplyAction="http://tempuri.org/IAuthenticationService/GetUserResponse")]
-        System.Threading.Tasks.Task<string> GetUserAsync(int value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticationService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IAuthenticationService/GetDataUsingDataContractResponse")]
-        AuthenticationService.Test.AuthenticationServiceProxy.CompositeType GetDataUsingDataContract(AuthenticationService.Test.AuthenticationServiceProxy.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticationService/CreateUser", ReplyAction="http://tempuri.org/IAuthenticationService/CreateUserResponse")]
+        System.Threading.Tasks.Task<string> CreateUserAsync(int value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticationService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IAuthenticationService/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<AuthenticationService.Test.AuthenticationServiceProxy.CompositeType> GetDataUsingDataContractAsync(AuthenticationService.Test.AuthenticationServiceProxy.CompositeType composite);
+        AuthenticationService.Test.testAuthAzure.CompositeType GetDataUsingDataContract(AuthenticationService.Test.testAuthAzure.CompositeType composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticationService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IAuthenticationService/GetDataUsingDataContractResponse")]
+        System.Threading.Tasks.Task<AuthenticationService.Test.testAuthAzure.CompositeType> GetDataUsingDataContractAsync(AuthenticationService.Test.testAuthAzure.CompositeType composite);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IAuthenticationServiceChannel : AuthenticationService.Test.AuthenticationServiceProxy.IAuthenticationService, System.ServiceModel.IClientChannel {
+    public interface IAuthenticationServiceChannel : AuthenticationService.Test.testAuthAzure.IAuthenticationService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class AuthenticationServiceClient : System.ServiceModel.ClientBase<AuthenticationService.Test.AuthenticationServiceProxy.IAuthenticationService>, AuthenticationService.Test.AuthenticationServiceProxy.IAuthenticationService {
+    public partial class AuthenticationServiceClient : System.ServiceModel.ClientBase<AuthenticationService.Test.testAuthAzure.IAuthenticationService>, AuthenticationService.Test.testAuthAzure.IAuthenticationService {
         
         public AuthenticationServiceClient() {
         }
@@ -118,19 +118,19 @@ namespace AuthenticationService.Test.AuthenticationServiceProxy {
                 base(binding, remoteAddress) {
         }
         
-        public string GetUser(int value) {
-            return base.Channel.GetUser(value);
+        public string CreateUser(int value) {
+            return base.Channel.CreateUser(value);
         }
         
-        public System.Threading.Tasks.Task<string> GetUserAsync(int value) {
-            return base.Channel.GetUserAsync(value);
+        public System.Threading.Tasks.Task<string> CreateUserAsync(int value) {
+            return base.Channel.CreateUserAsync(value);
         }
         
-        public AuthenticationService.Test.AuthenticationServiceProxy.CompositeType GetDataUsingDataContract(AuthenticationService.Test.AuthenticationServiceProxy.CompositeType composite) {
+        public AuthenticationService.Test.testAuthAzure.CompositeType GetDataUsingDataContract(AuthenticationService.Test.testAuthAzure.CompositeType composite) {
             return base.Channel.GetDataUsingDataContract(composite);
         }
         
-        public System.Threading.Tasks.Task<AuthenticationService.Test.AuthenticationServiceProxy.CompositeType> GetDataUsingDataContractAsync(AuthenticationService.Test.AuthenticationServiceProxy.CompositeType composite) {
+        public System.Threading.Tasks.Task<AuthenticationService.Test.testAuthAzure.CompositeType> GetDataUsingDataContractAsync(AuthenticationService.Test.testAuthAzure.CompositeType composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
     }

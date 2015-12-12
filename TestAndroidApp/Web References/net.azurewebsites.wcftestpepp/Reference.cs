@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace TestAndroidApp.wcftestpeppProxy {
+namespace TestAndroidApp.net.azurewebsites.wcftestpepp {
     using System;
     using System.Web.Services;
     using System.Diagnostics;

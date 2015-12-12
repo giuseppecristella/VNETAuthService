@@ -9,8 +9,10 @@ namespace AuthenticationService.Test
         [TestMethod]
         public void Should_Create_User_Via_WCF()
         { 
-            var authenticationServiceProxy = new AuthenticationServiceProxy.AuthenticationServiceClient();
-            authenticationServiceProxy.GetUser(1);
+            //var authenticationServiceProxy = new AuthenticationServiceProxy.AuthenticationServiceClient();
+            //authenticationServiceProxy.GetUser(1);
+
+            var test = new testAuthAzure.AuthenticationServiceClient();
 
         }
     }

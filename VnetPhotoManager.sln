@@ -4,8 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationService.Test", "AuthenticationService.Test\AuthenticationService.Test.csproj", "{39718A9C-7091-49CD-B6FF-B052FC2E5914}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BEAF5AB1-23B0-4C12-929E-D0DCB8201395} = {BEAF5AB1-23B0-4C12-929E-D0DCB8201395}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationService", "AuthenticationService\AuthenticationService.csproj", "{BEAF5AB1-23B0-4C12-929E-D0DCB8201395}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAndroidApp", "TestAndroidApp\TestAndroidApp.csproj", "{2688561A-FC4B-40C9-90BC-50FCD0D7F917}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +26,12 @@ Global
 		{BEAF5AB1-23B0-4C12-929E-D0DCB8201395}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEAF5AB1-23B0-4C12-929E-D0DCB8201395}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEAF5AB1-23B0-4C12-929E-D0DCB8201395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2688561A-FC4B-40C9-90BC-50FCD0D7F917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2688561A-FC4B-40C9-90BC-50FCD0D7F917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2688561A-FC4B-40C9-90BC-50FCD0D7F917}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2688561A-FC4B-40C9-90BC-50FCD0D7F917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2688561A-FC4B-40C9-90BC-50FCD0D7F917}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2688561A-FC4B-40C9-90BC-50FCD0D7F917}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

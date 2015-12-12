@@ -7,11 +7,11 @@
       <xsd:import schemaLocation="http://localhost:13278/AuthenticationService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AuthenticationService" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IAuthenticationService_GetUser_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetUser" />
+  <wsdl:message name="IAuthenticationService_CreateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
   </wsdl:message>
-  <wsdl:message name="IAuthenticationService_GetUser_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  <wsdl:message name="IAuthenticationService_CreateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
   </wsdl:message>
   <wsdl:message name="IAuthenticationService_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
@@ -20,9 +20,9 @@
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
   </wsdl:message>
   <wsdl:portType name="IAuthenticationService">
-    <wsdl:operation name="GetUser">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAuthenticationService/GetUser" message="tns:IAuthenticationService_GetUser_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAuthenticationService/GetUserResponse" message="tns:IAuthenticationService_GetUser_OutputMessage" />
+    <wsdl:operation name="CreateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthenticationService/CreateUser" message="tns:IAuthenticationService_CreateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthenticationService/CreateUserResponse" message="tns:IAuthenticationService_CreateUser_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IAuthenticationService/GetDataUsingDataContract" message="tns:IAuthenticationService_GetDataUsingDataContract_InputMessage" />
@@ -31,8 +31,8 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAuthenticationService" type="tns:IAuthenticationService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetUser">
-      <soap:operation soapAction="http://tempuri.org/IAuthenticationService/GetUser" style="document" />
+    <wsdl:operation name="CreateUser">
+      <soap:operation soapAction="http://tempuri.org/IAuthenticationService/CreateUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -53,50 +53,94 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
-    <Compile Include="Web References\AuthenticationServiceProxy\Reference.cs">
+    <Compile Include="Web References\localauth\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <Compile Include="Web References\wcftestpeppProxy\Reference.cs">
+    <Compile Include="Web References\net.azurewebsites.wcftestpepp\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\vnetauthenticationservice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wcfauth\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <None Include="GettingStarted.Xamarin" />
-    <None Include="Web References\AuthenticationServiceProxy\AuthenticationService.wsdl" />
-    <None Include="Web References\AuthenticationServiceProxy\AuthenticationService.xsd">
+    <None Include="Web References\localauth\AuthenticationService.wsdl" />
+    <None Include="Web References\localauth\AuthenticationService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web References\AuthenticationServiceProxy\AuthenticationService0.xsd">
+    <None Include="Web References\localauth\AuthenticationService0.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web References\AuthenticationServiceProxy\AuthenticationService1.xsd">
+    <None Include="Web References\localauth\AuthenticationService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web References\AuthenticationServiceProxy\CompositeType.datasource">
+    <None Include="Web References\localauth\CompositeType.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\AuthenticationServiceProxy\Reference.map">
+    <None Include="Web References\localauth\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\wcftestpeppProxy\CompositeType.datasource">
+    <None Include="Web References\net.azurewebsites.wcftestpepp\CompositeType.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\wcftestpeppProxy\Reference.map">
+    <None Include="Web References\net.azurewebsites.wcftestpepp\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\wcftestpeppProxy\Service1.wsdl" />
-    <None Include="Web References\wcftestpeppProxy\Service1.xsd">
+    <None Include="Web References\net.azurewebsites.wcftestpepp\Service1.wsdl" />
+    <None Include="Web References\net.azurewebsites.wcftestpepp\Service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web References\wcftestpeppProxy\Service10.xsd">
+    <None Include="Web References\net.azurewebsites.wcftestpepp\Service10.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web References\wcftestpeppProxy\Service11.xsd">
+    <None Include="Web References\net.azurewebsites.wcftestpepp\Service11.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\vnetauthenticationservice\AuthenticationService.wsdl" />
+    <None Include="Web References\vnetauthenticationservice\AuthenticationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\vnetauthenticationservice\AuthenticationService0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\vnetauthenticationservice\AuthenticationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\vnetauthenticationservice\CompositeType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\vnetauthenticationservice\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wcfauth\AuthenticationService.wsdl" />
+    <None Include="Web References\wcfauth\AuthenticationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\wcfauth\AuthenticationService0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\wcfauth\AuthenticationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\wcfauth\CompositeType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wcfauth\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="web.config">
       <SubType>Designer</SubType>
@@ -139,8 +183,34 @@
   <ItemGroup>
     <WebReferenceUrl Include="http://localhost:13278/AuthenticationService.svc">
       <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\AuthenticationServiceProxy\</RelPath>
+      <RelPath>Web References\localauth\</RelPath>
       <UpdateFromURL>http://localhost:13278/AuthenticationService.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://vnetauthenticationservice.azurewebsites.net/AuthenticationService.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\vnetauthenticationservice\</RelPath>
+      <UpdateFromURL>http://vnetauthenticationservice.azurewebsites.net/AuthenticationService.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://wcfauth.azurewebsites.net/AuthenticationService.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wcfauth\</RelPath>
+      <UpdateFromURL>http://wcfauth.azurewebsites.net/AuthenticationService.svc</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -152,7 +222,7 @@
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://wcftestpepp.azurewebsites.net/Service1.svc">
       <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\wcftestpeppProxy\</RelPath>
+      <RelPath>Web References\net.azurewebsites.wcftestpepp\</RelPath>
       <UpdateFromURL>http://wcftestpepp.azurewebsites.net/Service1.svc</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
@@ -165,10 +235,16 @@
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Web References\AuthenticationServiceProxy\AuthenticationService.disco" />
+    <None Include="Web References\net.azurewebsites.wcftestpepp\Service1.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Web References\wcftestpeppProxy\Service1.disco" />
+    <None Include="Web References\vnetauthenticationservice\AuthenticationService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\wcfauth\AuthenticationService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\localauth\AuthenticationService.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

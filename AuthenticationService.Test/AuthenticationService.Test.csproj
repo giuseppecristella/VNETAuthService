@@ -53,7 +53,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Service References\AuthenticationServiceProxy\Reference.cs">
+    <Compile Include="Service References\testAuthAzure\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -66,34 +66,34 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Service References\AuthenticationServiceProxy\AuthenticationService.Test.AuthenticationServiceProxy.CompositeType.datasource">
+    <None Include="Service References\testAuthAzure\AuthenticationService.Test.testAuthAzure.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\AuthenticationServiceProxy\AuthenticationService.wsdl" />
-    <None Include="Service References\AuthenticationServiceProxy\AuthenticationService.xsd">
+    <None Include="Service References\testAuthAzure\AuthenticationService.wsdl" />
+    <None Include="Service References\testAuthAzure\AuthenticationService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\AuthenticationServiceProxy\AuthenticationService1.xsd">
+    <None Include="Service References\testAuthAzure\AuthenticationService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\AuthenticationServiceProxy\AuthenticationService2.xsd">
+    <None Include="Service References\testAuthAzure\AuthenticationService2.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\AuthenticationServiceProxy\" />
+    <WCFMetadataStorage Include="Service References\testAuthAzure\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\AuthenticationServiceProxy\AuthenticationService.disco" />
+    <None Include="Service References\testAuthAzure\AuthenticationService.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\AuthenticationServiceProxy\configuration91.svcinfo" />
+    <None Include="Service References\testAuthAzure\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\AuthenticationServiceProxy\configuration.svcinfo" />
+    <None Include="Service References\testAuthAzure\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\AuthenticationServiceProxy\Reference.svcmap">
+    <None Include="Service References\testAuthAzure\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

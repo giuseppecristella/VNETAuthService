@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace TestAndroidApp.AuthenticationServiceProxy {
+namespace TestAndroidApp.localauth {
     using System;
     using System.Web.Services;
     using System.Diagnostics;
@@ -29,7 +29,7 @@ namespace TestAndroidApp.AuthenticationServiceProxy {
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_IAuthenticationService", Namespace="http://tempuri.org/")]
     public partial class AuthenticationService : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
-        private System.Threading.SendOrPostCallback GetUserOperationCompleted;
+        private System.Threading.SendOrPostCallback CreateUserOperationCompleted;
         
         private System.Threading.SendOrPostCallback GetDataUsingDataContractOperationCompleted;
         
@@ -72,40 +72,40 @@ namespace TestAndroidApp.AuthenticationServiceProxy {
         }
         
         /// <remarks/>
-        public event GetUserCompletedEventHandler GetUserCompleted;
+        public event CreateUserCompletedEventHandler CreateUserCompleted;
         
         /// <remarks/>
         public event GetDataUsingDataContractCompletedEventHandler GetDataUsingDataContractCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IAuthenticationService/GetUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IAuthenticationService/CreateUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string GetUser(int value, [System.Xml.Serialization.XmlIgnoreAttribute()] bool valueSpecified) {
-            object[] results = this.Invoke("GetUser", new object[] {
+        public string CreateUser(int value, [System.Xml.Serialization.XmlIgnoreAttribute()] bool valueSpecified) {
+            object[] results = this.Invoke("CreateUser", new object[] {
                         value,
                         valueSpecified});
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void GetUserAsync(int value, bool valueSpecified) {
-            this.GetUserAsync(value, valueSpecified, null);
+        public void CreateUserAsync(int value, bool valueSpecified) {
+            this.CreateUserAsync(value, valueSpecified, null);
         }
         
         /// <remarks/>
-        public void GetUserAsync(int value, bool valueSpecified, object userState) {
-            if ((this.GetUserOperationCompleted == null)) {
-                this.GetUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetUserOperationCompleted);
+        public void CreateUserAsync(int value, bool valueSpecified, object userState) {
+            if ((this.CreateUserOperationCompleted == null)) {
+                this.CreateUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCreateUserOperationCompleted);
             }
-            this.InvokeAsync("GetUser", new object[] {
+            this.InvokeAsync("CreateUser", new object[] {
                         value,
-                        valueSpecified}, this.GetUserOperationCompleted, userState);
+                        valueSpecified}, this.CreateUserOperationCompleted, userState);
         }
         
-        private void OnGetUserOperationCompleted(object arg) {
-            if ((this.GetUserCompleted != null)) {
+        private void OnCreateUserOperationCompleted(object arg) {
+            if ((this.CreateUserCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetUserCompleted(this, new GetUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.CreateUserCompleted(this, new CreateUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -207,17 +207,17 @@ namespace TestAndroidApp.AuthenticationServiceProxy {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.81.0")]
-    public delegate void GetUserCompletedEventHandler(object sender, GetUserCompletedEventArgs e);
+    public delegate void CreateUserCompletedEventHandler(object sender, CreateUserCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.81.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class CreateUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal GetUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal CreateUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

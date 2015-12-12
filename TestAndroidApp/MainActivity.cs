@@ -33,12 +33,14 @@ namespace TestAndroidApp
             webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8", null);
 
             // Test chiamata WS
-            var test = new wcftestpeppProxy.Service1();
-            var ret = test.GetData(1, true);
-            var authenticationService = new AuthenticationServiceProxy.AuthenticationService();
+
+
+            var a = new net.azurewebsites.wcftestpepp.Service1();
+            var b = new localauth.AuthenticationService();
+
             ////  169.254.39.103
             //authenticationService.Url.Replace("localhost", "10.0.2.2");
-           // var result = authenticationService.GetUser(1);
+            // var result = authenticationService.GetUser(1);
         }
 
         private class HybridWebViewClient : WebViewClient
