@@ -12,7 +12,7 @@ namespace AuthenticationService
     [ServiceContract]
     public interface IAuthenticationService
     {
-
+         
         [OperationContract]
         string CreateUser(int value);
 
