@@ -21,7 +21,7 @@ namespace AuthenticationService
             return status.ToString();
         }
 
-        public bool Login(string username, string password)
+        public bool CustomValidateUser(string username, string password)
         {
             return Membership.ValidateUser(username, password);
         }
