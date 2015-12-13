@@ -18,7 +18,7 @@ namespace AuthenticationService
             MembershipCreateStatus status;
             Membership.CreateUser(username, password, email, "a", "b", true, out status);
 
-            return status.ToString();
+            return status.ToString(); 
         }
 
         public bool CustomValidateUser(string username, string password)
