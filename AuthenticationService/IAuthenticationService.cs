@@ -18,7 +18,7 @@ namespace AuthenticationService
             bool isApproved);
 
         [OperationContract]
-        bool CustomValidateUser(string username, string password);
+        string CustomValidateUser(string username, string password);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);

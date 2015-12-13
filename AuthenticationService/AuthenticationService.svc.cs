@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -21,9 +22,14 @@ namespace AuthenticationService
             return status.ToString(); 
         }
 
-        public bool CustomValidateUser(string username, string password)
+        public string CustomValidateUser(string username, string password)
         {
-            return Membership.ValidateUser(username, password);
+            if (Membership.ValidateUser(username, password)) return "ok";
+            else
+            {
+                return "ko";
+            }
+
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)
