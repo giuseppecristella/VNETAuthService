@@ -13,12 +13,17 @@ namespace AuthenticationService
     // NOTA: per avviare il client di prova WCF per testare il servizio, selezionare Service1.svc o Service1.svc.cs in Esplora soluzioni e avviare il debug.
     public class AuthenticationService : IAuthenticationService
     {
-        public string CreateUser(int value)
+        public string CreateUser(string username, string password, string email, string passwordQuestion, string passwordAnswer, bool isApproved)
         {
             MembershipCreateStatus status;
-            Membership.CreateUser("test0001", "prova0001", "test.cristella@libero.it", "a", "b", true, out status);
+            Membership.CreateUser(username, password, email, "a", "b", true, out status);
 
             return status.ToString();
+        }
+
+        public bool Login(string username, string password)
+        {
+            return Membership.ValidateUser(username, password);
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)

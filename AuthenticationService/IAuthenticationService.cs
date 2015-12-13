@@ -12,9 +12,13 @@ namespace AuthenticationService
     [ServiceContract]
     public interface IAuthenticationService
     {
-         
+
         [OperationContract]
-        string CreateUser(int value);
+        string CreateUser(string username, string password, string email, string passwordQuestion, string passwordAnswer,
+            bool isApproved);
+
+        [OperationContract]
+        bool Login(string username, string password);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
