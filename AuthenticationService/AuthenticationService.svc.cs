@@ -29,7 +29,7 @@ namespace AuthenticationService
             return Membership.ValidateUser(username, password) ? "ok" : "ko";
         }
 
-        public int GetClientCode(string code)
+        public string GetClientCode(string code)
         {
             var connetionString = System.Configuration.ConfigurationManager.ConnectionStrings["Sql_Azure"].ToString();
             var clientId = 0;
@@ -51,7 +51,7 @@ namespace AuthenticationService
                 }
                 connection.Close();
             }
-            return clientId;
+            return clientId.ToString();
         }
 
         /// <summary>
