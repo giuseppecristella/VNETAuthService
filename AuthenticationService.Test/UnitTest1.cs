@@ -15,5 +15,13 @@ namespace AuthenticationService.Test
             var test = new testAuthAzure.AuthenticationServiceClient();
 
         }
+
+        [TestMethod]
+        public void Should_Get_Client_Code()
+        {
+            var localAuthServiceProxy = new localAuthService.AuthenticationServiceClient();
+            var retCode = localAuthServiceProxy.GetClientCode("0001");
+            Assert.IsNotNull(retCode);
+        }
     }
 }

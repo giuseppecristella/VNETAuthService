@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AuthenticationService.Test.testAuthAzure {
+namespace AuthenticationService.Test.localAuthService {
     using System.Runtime.Serialization;
     using System;
     
@@ -75,7 +75,7 @@ namespace AuthenticationService.Test.testAuthAzure {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="testAuthAzure.IAuthenticationService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="localAuthService.IAuthenticationService")]
     public interface IAuthenticationService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticationService/CreateUser", ReplyAction="http://tempuri.org/IAuthenticationService/CreateUserResponse")]
@@ -103,19 +103,19 @@ namespace AuthenticationService.Test.testAuthAzure {
         System.Threading.Tasks.Task<bool> CreateUserClientAsync(int clientId, string codiceStruttura, string nome, string cognome, string indirizzo, string citta, string provincia, string cap, string nazione, string telefono, string cellulare, string email, string password, System.DateTime registratoIl, bool attivo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticationService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IAuthenticationService/GetDataUsingDataContractResponse")]
-        AuthenticationService.Test.testAuthAzure.CompositeType GetDataUsingDataContract(AuthenticationService.Test.testAuthAzure.CompositeType composite);
+        AuthenticationService.Test.localAuthService.CompositeType GetDataUsingDataContract(AuthenticationService.Test.localAuthService.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthenticationService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IAuthenticationService/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<AuthenticationService.Test.testAuthAzure.CompositeType> GetDataUsingDataContractAsync(AuthenticationService.Test.testAuthAzure.CompositeType composite);
+        System.Threading.Tasks.Task<AuthenticationService.Test.localAuthService.CompositeType> GetDataUsingDataContractAsync(AuthenticationService.Test.localAuthService.CompositeType composite);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IAuthenticationServiceChannel : AuthenticationService.Test.testAuthAzure.IAuthenticationService, System.ServiceModel.IClientChannel {
+    public interface IAuthenticationServiceChannel : AuthenticationService.Test.localAuthService.IAuthenticationService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class AuthenticationServiceClient : System.ServiceModel.ClientBase<AuthenticationService.Test.testAuthAzure.IAuthenticationService>, AuthenticationService.Test.testAuthAzure.IAuthenticationService {
+    public partial class AuthenticationServiceClient : System.ServiceModel.ClientBase<AuthenticationService.Test.localAuthService.IAuthenticationService>, AuthenticationService.Test.localAuthService.IAuthenticationService {
         
         public AuthenticationServiceClient() {
         }
@@ -168,11 +168,11 @@ namespace AuthenticationService.Test.testAuthAzure {
             return base.Channel.CreateUserClientAsync(clientId, codiceStruttura, nome, cognome, indirizzo, citta, provincia, cap, nazione, telefono, cellulare, email, password, registratoIl, attivo);
         }
         
-        public AuthenticationService.Test.testAuthAzure.CompositeType GetDataUsingDataContract(AuthenticationService.Test.testAuthAzure.CompositeType composite) {
+        public AuthenticationService.Test.localAuthService.CompositeType GetDataUsingDataContract(AuthenticationService.Test.localAuthService.CompositeType composite) {
             return base.Channel.GetDataUsingDataContract(composite);
         }
         
-        public System.Threading.Tasks.Task<AuthenticationService.Test.testAuthAzure.CompositeType> GetDataUsingDataContractAsync(AuthenticationService.Test.testAuthAzure.CompositeType composite) {
+        public System.Threading.Tasks.Task<AuthenticationService.Test.localAuthService.CompositeType> GetDataUsingDataContractAsync(AuthenticationService.Test.localAuthService.CompositeType composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
     }

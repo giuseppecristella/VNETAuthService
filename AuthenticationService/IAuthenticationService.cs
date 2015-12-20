@@ -21,6 +21,13 @@ namespace AuthenticationService
         string CustomValidateUser(string username, string password);
 
         [OperationContract]
+        int GetClientCode(string code);
+
+        [OperationContract]
+        bool CreateUserClient(int clientId, string codiceStruttura, string nome, string cognome, string indirizzo, string citta, string provincia, string cap,
+            string nazione, string telefono, string cellulare, string email, string password, DateTime registratoIl, bool attivo);
+
+        [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: aggiungere qui le operazioni del servizio

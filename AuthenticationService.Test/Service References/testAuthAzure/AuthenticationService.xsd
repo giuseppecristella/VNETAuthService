@@ -4,7 +4,12 @@
   <xs:element name="CreateUser">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="value" type="xs:int" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passwordQuestion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passwordAnswer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isApproved" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -12,6 +17,63 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="CreateUserResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomValidateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomValidateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomValidateUserResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetClientCodeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUserClient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="clientId" type="xs:int" />
+        <xs:element minOccurs="0" name="codiceStruttura" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cognome" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="indirizzo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="citta" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="provincia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cap" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nazione" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="telefono" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cellulare" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="registratoIl" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="attivo" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUserClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateUserClientResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

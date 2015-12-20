@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="defa88c4-0fd6-4118-ba67-0a1e8d7ea2a9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:13278/AuthenticationService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AuthenticationService.xsd" MetadataType="Schema" ID="3c5b716b-87ba-4ce9-8d1a-4ed4c76810d7" SourceId="1" SourceUrl="http://localhost:13278/AuthenticationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AuthenticationService.wsdl" MetadataType="Wsdl" ID="0d98d578-0470-4ee8-ba8f-de44be9a9e90" SourceId="1" SourceUrl="http://localhost:13278/AuthenticationService.svc?wsdl" />
+    <MetadataFile FileName="AuthenticationService.disco" MetadataType="Disco" ID="01b66093-fb02-46a8-8288-0641fedb6461" SourceId="1" SourceUrl="http://localhost:13278/AuthenticationService.svc?disco" />
+    <MetadataFile FileName="AuthenticationService1.xsd" MetadataType="Schema" ID="dab8c608-1b0e-426c-9975-9d7c39caf7a4" SourceId="1" SourceUrl="http://localhost:13278/AuthenticationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AuthenticationService2.xsd" MetadataType="Schema" ID="ad701690-2d14-4389-a811-391453ca5735" SourceId="1" SourceUrl="http://localhost:13278/AuthenticationService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

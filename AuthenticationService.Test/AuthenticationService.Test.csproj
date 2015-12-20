@@ -53,6 +53,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Service References\localAuthService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\testAuthAzure\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -66,6 +71,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Service References\localAuthService\AuthenticationService.Test.localAuthService.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\localAuthService\AuthenticationService.wsdl" />
+    <None Include="Service References\localAuthService\AuthenticationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\localAuthService\AuthenticationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\localAuthService\AuthenticationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\testAuthAzure\AuthenticationService.Test.testAuthAzure.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -81,6 +99,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\localAuthService\" />
     <WCFMetadataStorage Include="Service References\testAuthAzure\" />
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +113,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\testAuthAzure\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\localAuthService\AuthenticationService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\localAuthService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\localAuthService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\localAuthService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
